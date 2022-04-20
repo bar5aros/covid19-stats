@@ -20,5 +20,18 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     // allow jsx syntax in js files (for next.js project)
     "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
+    // error importing stuff
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
+      },
+    ],
+    // we'll migrate using typescript, just disabling this
+    "react/prop-types": "off",
   },
 };

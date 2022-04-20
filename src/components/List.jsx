@@ -1,11 +1,11 @@
-import Card from "./Card.jsx";
+import Card from "./Card";
 
-function List(props) {
+function List({ countries }) {
   return (
     <div>
       <ul>
-        {props.items.map((item) => (
-          <Card key={item.id} name={item} />
+        {countries.map((country) => (
+          <Card key={country} name={country} />
         ))}
       </ul>
     </div>
