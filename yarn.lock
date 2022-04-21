@@ -1027,7 +1027,7 @@ __metadata:
     prettier-plugin-tailwindcss: ^0.1.10
     react: ^18.0.0
     react-dom: ^18.0.0
-    react-router-dom: ^6.3.0
+    react-router-dom: 6
     tailwindcss: ^3.0.24
     vite: ^2.9.5
   languageName: unknown
@@ -3134,7 +3134,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:^6.3.0":
+"react-router-dom@npm:6":
   version: 6.3.0
   resolution: "react-router-dom@npm:6.3.0"
   dependencies:
