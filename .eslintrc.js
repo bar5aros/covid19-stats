@@ -33,5 +33,6 @@ module.exports = {
     ],
     // we'll migrate using typescript, just disabling this
     "react/prop-types": "off",
+    "react/destructuring-assignment": "off",
   },
 };
