@@ -5,7 +5,9 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "prettier": "prettier --write 'src/**/*.tsx'",
+        "lint": "eslint 'src/**/*.tsx'"
     },
     "dependencies": {
         "axios": "^0.26.1",
