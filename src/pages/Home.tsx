@@ -1,23 +1,22 @@
-// React hooks
-import { useState, useEffect } from "react";
+import * as React from "react";
 // UI Components
 import Header from "../components/Header";
 import List from "../components/List";
 import axiosIns from "../libs/axios";
+import { ICountry } from "../interfaces";
 
 export default function Home() {
-  const [countriesData, setCountriesData] = useState([]);
-  useEffect(() => {
-    axiosIns.get("/countries").then((response) => {
-      console.log(response.data.response);
-      setCountriesData(response.data.response);
-    });
-  }, []);
-
-  return (
-    <>
-      <Header />
-      <List countries={countriesData} />
-    </>
-  );
+    const [countriesList, setCountriesList] = React.useState<ICountry[]>([]);
+    React.useEffect(() => {
+        (async () => {
+            const { data } = await axiosIns.get("/countries");
+            setCountriesList(data.response);
+        })();
+    }, []);
+    return (
+        <>
+            <Header />
+            <List countriesData={countriesList} />
+        </>
+    );
 }
